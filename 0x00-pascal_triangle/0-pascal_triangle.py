@@ -7,7 +7,7 @@ def pascal_triangle(n):
         Return: A list of lists of integers representing the Pascal’s triangle of n
         """
         if n == 0:
-             return [[]]
+             return []
         if n == 1:
             return [[1]]
         current = [1]
