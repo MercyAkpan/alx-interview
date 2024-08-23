@@ -12,7 +12,7 @@ def validUTF8(data):
     # While there are still bytes to check in the data
     while i < len(data):
         # Read the current byte
-        byte = data[i]
+        byte = data[i] & 0xFF
         # Determine the number of bytes in the character
         #  based on the first byte
         if (byte & 0b10000000) == 0:
@@ -32,12 +32,12 @@ def validUTF8(data):
             return False
 
         # Check that the following bytes are valid continuation bytes
-        for i in range(1, (num_bytes - 1)):
+        for j in range(1, (num_bytes)):
             # Move to the next byte
             i += 1
             # Check if the next byte exists
             # and is a valid continuation byte (starts with 10xxxxxx)
-            if i >= len(data) or (data[i] & 0b11000000) != 0b10000000:
+            if i >= len(data) or ((data[i] & 0b11000000) != 0b10000000):
                 return False
 
         # Move to the next character in the data
