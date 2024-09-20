@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+    This function takes in a list of coins and an amount and returns the minimum number of coins needed to make the amount.
+"""
+
 def makeChange(coin, amount):
     """
     This function takes in a list of coins and an amount and returns the minimum number of coins needed to make the amount.
