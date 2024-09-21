@@ -10,7 +10,7 @@ def makeChange(coin, amount):
     This function takes in a list of coins and an amount and returns
     the minimum number of coins needed to make the amount.
     """
-    if amount < 1:
+    if (amount < 1):
         return 0
     array = [(amount + 1)] * (amount + 1)
     # print(array)
