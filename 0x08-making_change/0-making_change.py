@@ -12,6 +12,8 @@ def makeChange(coin, amount):
     """
     if (amount < 1):
         return 0
+    if all(c > amount for c in coin):
+        return -1
     array = [(amount + 1)] * (amount + 1)
     # print(array)
     # print(len(array))
