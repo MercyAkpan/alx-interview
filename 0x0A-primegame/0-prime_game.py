@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+This is a solution to the Prime Game problem.
+"""
 def sieve_of_eratosthenes(n):
     # Initialize an array to track prime status of each number
     is_prime = [True] * (n + 1)
@@ -15,6 +18,7 @@ def sieve_of_eratosthenes(n):
 
 
 def isWinner(x, nums):
+    # This is a function to determine the winner of the prime game
     if (x == 0):
         return None
     if (len(nums) == 0):
@@ -41,6 +45,3 @@ def isWinner(x, nums):
         return "Ben"
     else:
         return None  # If it's a tie
-
-# Example usage:
-# print("Winner:", isWinner(5, [2, 5, 1, 4, 3]))  # Output: "Maria"
