@@ -2,6 +2,8 @@
 """
 This is a solution to the Prime Game problem.
 """
+
+
 def sieve_of_eratosthenes(n):
     "Initialize an array to track prime status of each number"
     is_prime = [True] * (n + 1)
