@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def sieve_of_eratosthenes(n):
     # Initialize an array to track prime status of each number
     is_prime = [True] * (n + 1)
@@ -12,6 +13,7 @@ def sieve_of_eratosthenes(n):
     prime_count = sum(1 for p in range(2, n + 1) if is_prime[p])
     return prime_count
 
+
 def isWinner(x, nums):
     if (x == 0):
         return None
@@ -20,18 +22,18 @@ def isWinner(x, nums):
     # Track the number of wins for Maria and Ben
     maria_wins = 0
     ben_wins = 0
-    
+
     # Play each round
     for i in range(x):
         n = nums[i]
         prime_count = sieve_of_eratosthenes(n)
-        
+
         # Determine winner based on the count of primes
         if prime_count % 2 == 1:
             maria_wins += 1
         else:
             ben_wins += 1
-    
+
     # Determine who won the most rounds
     if maria_wins > ben_wins:
         return "Maria"
