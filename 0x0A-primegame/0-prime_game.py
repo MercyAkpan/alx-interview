@@ -3,7 +3,7 @@
 This is a solution to the Prime Game problem.
 """
 def sieve_of_eratosthenes(n):
-    # Initialize an array to track prime status of each number
+    "Initialize an array to track prime status of each number"
     is_prime = [True] * (n + 1)
     p = 2
     # Implement the sieve algorithm
@@ -18,7 +18,7 @@ def sieve_of_eratosthenes(n):
 
 
 def isWinner(x, nums):
-    # This is a function to determine the winner of the prime game
+    "This is a function to determine the winner of the prime game"
     if (x == 0):
         return None
     if (len(nums) == 0):
